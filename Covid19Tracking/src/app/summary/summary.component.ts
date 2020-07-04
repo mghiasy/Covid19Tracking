@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { SummaryObj } from '../summary-obj';
 import { DataFetcherServiceService } from '../data-fetcher-service.service';
 import { Observable } from 'rxjs';
-import { Countries } from '../countries';
 import { Country } from '../country';
 
 @Component({
@@ -13,7 +12,10 @@ import { Country } from '../country';
 export class SummaryComponent implements OnInit {
  public summaryObj = new SummaryObj();
  //define variable of type array of country
- countryList = new Countries();
+ countryList = [Country];
+filterParam :string;
+
+
  //for instantiation , not to do actual work
   constructor(private _service : DataFetcherServiceService) { }
   
@@ -26,19 +28,18 @@ export class SummaryComponent implements OnInit {
     this._service.fetchGlobalSummary().subscribe(
       data=>{
         //subscribe method has 2 param of data & error
-        console.log("received successfully"+data)
+        // console.log("received successfully"+data)
         //summary data is in global obj
         // this.summaryObj.NewConfirmed=data.Global.NewConfirmed;
         //accessed in UI by {{double coli bracket}}
         this.summaryObj=data.Global;
-        this.countryList=data.countries;
-        console.log("received successfully"+this.countryList)
+        this.countryList=data.Countries;
       },
       error => console.log("error occured")
     )
   }
   applyFilter(){
-    console.log("applyfilter");
+    console.log("applyfilter"+this.filterParam);
    
   }
 

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +11,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { SymptomsComponent } from './symptoms/symptoms.component';
 import { DataCollectionComponent } from './data-collection/data-collection.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './filter.pipe';
 // import {HttpClient} from '@angular/common/http'
 
 @NgModule({
@@ -22,12 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
     CountryWiseSummaryComponent,
     AboutusComponent,
     SymptomsComponent,
-    DataCollectionComponent
+    DataCollectionComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-     HttpClientModule
+     HttpClientModule,
+     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,27 +5,31 @@
         <div class="col-lg-3"></div>
         <div class="col-lg-6" style="text-align: center;">
             <form class="form-inline active-cyan-4">
-                <input class="form-control form-control-sm mr-3 w-75 input-lg" type="search"
-                    placeholder="Search country" aria-label="Search">
+                <!-- SearchBox =>input class with type=search-->
+                <input class="form-control form-control-sm mr-3 w-75 input-lg" type="text"
+                    placeholder="Search country" aria-label="Search" (blur)="applyFilter();" [(ngModel)]="filterParam" name="searchbox">
+                    <!-- blur = when the input field loses focus , key down => when start typing-->
+                    <!-- get data with 2 way Model Binding -->
                 <button class="btn btn-outline-success" type="submit" (click)="applyFilter()">Search</button>
             </form>
         </div>
         <div class="col-lg-3"></div>
     </div>
 
-    <div class="row" style="min-height: 25px;">
-    </div>
+    <div class="row" style="min-height: 25px;"> </div>
     <div class="container">
         <div class="row" style="min-height: 125px;">
 
             <div class="col-lg-1"></div>
 
             <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
-                <div class="row" style="min-height: 100px;" >
-                    <div class="col-lg-12 bg-warning" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.NewConfirmed}}</div>
+                <div class="row" style="min-height: 100px;">
+                    <div class="col-lg-12 bg-warning" style="color: white; font-size: xx-large; text-align: center;">
+                        {{summaryObj.NewConfirmed}}</div>
                 </div>
                 <div class="row" style="min-height: 25 px;">
-                    <div class="col-lg-12 text-warning" style="font-weight: 600; text-align: center;">New Confirmed cases</div>
+                    <div class="col-lg-12 text-warning" style="font-weight: 600; text-align: center;">New Confirmed
+                        cases</div>
                 </div>
             </div>
 
@@ -34,24 +38,28 @@
             <div class="col-lg-2"></div>
 
             <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
-                <div class="row" style="min-height: 100px;" >
-                    <div class="col-lg-12 bg-success" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.NewRecovered}}</div>
+                <div class="row" style="min-height: 100px;">
+                    <div class="col-lg-12 bg-success" style="color: white; font-size: xx-large; text-align: center;">
+                        {{summaryObj.NewRecovered}}</div>
                 </div>
                 <div class="row" style="min-height: 25 px;">
-                    <div class="col-lg-12 text-success" style="font-weight: 600; text-align: center;">New Recovery cases</div>
+                    <div class="col-lg-12 text-success" style="font-weight: 600; text-align: center;">New Recovery cases
+                    </div>
                 </div>
-            </div> 
+            </div>
 
 
 
             <div class="col-lg-2"></div>
 
             <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
-                <div class="row" style="min-height: 100px;" >
-                    <div class="col-lg-12 bg-danger" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.NewDeaths}}</div>
+                <div class="row" style="min-height: 100px;">
+                    <div class="col-lg-12 bg-danger" style="color: white; font-size: xx-large; text-align: center;">
+                        {{summaryObj.NewDeaths}}</div>
                 </div>
                 <div class="row" style="min-height: 25 px;">
-                    <div class="col-lg-12 text-danger" style="font-weight: 600; text-align: center;">New Death cases</div>
+                    <div class="col-lg-12 text-danger" style="font-weight: 600; text-align: center;">New Death cases
+                    </div>
                 </div>
             </div>
 
@@ -65,11 +73,13 @@
             <div class="col-lg-1"></div>
 
             <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
-                <div class="row" style="min-height: 100px;" >
-                    <div class="col-lg-12 bg-warning" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.TotalConfirmed}}</div>
+                <div class="row" style="min-height: 100px;">
+                    <div class="col-lg-12 bg-warning" style="color: white; font-size: xx-large; text-align: center;">
+                        {{summaryObj.TotalConfirmed}}</div>
                 </div>
                 <div class="row" style="min-height: 25 px;">
-                    <div class="col-lg-12 text-warning" style="font-weight: 600; text-align: center;">Total Confirmed cases</div>
+                    <div class="col-lg-12 text-warning" style="font-weight: 600; text-align: center;">Total Confirmed
+                        cases</div>
                 </div>
             </div>
 
@@ -78,28 +88,70 @@
             <div class="col-lg-2"></div>
 
             <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
-                <div class="row" style="min-height: 100px;" >
-                    <div class="col-lg-12 bg-success" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.TotalRecovered}}</div>
+                <div class="row" style="min-height: 100px;">
+                    <div class="col-lg-12 bg-success" style="color: white; font-size: xx-large; text-align: center;">
+                        {{summaryObj.TotalRecovered}}</div>
                 </div>
                 <div class="row" style="min-height: 25 px;">
-                    <div class="col-lg-12 text-success" style="font-weight: 600; text-align: center;">Total Recovery cases</div>
+                    <div class="col-lg-12 text-success" style="font-weight: 600; text-align: center;">Total Recovery
+                        cases</div>
                 </div>
-            </div> 
+            </div>
 
 
 
             <div class="col-lg-2"></div>
 
             <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
-                <div class="row" style="min-height: 100px;" >
-                    <div class="col-lg-12 bg-danger" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.TotalDeaths}}</div>
+                <div class="row" style="min-height: 100px;">
+                    <div class="col-lg-12 bg-danger" style="color: white; font-size: xx-large; text-align: center;">
+                        {{summaryObj.TotalDeaths}}</div>
                 </div>
                 <div class="row" style="min-height: 25 px;">
-                    <div class="col-lg-12 text-danger" style="font-weight: 600; text-align: center;">Total Death cases</div>
+                    <div class="col-lg-12 text-danger" style="font-weight: 600; text-align: center;">Total Death cases
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-1"></div>
         </div>
+    </div>
+    <div class="row" style="min-height: 50px;"></div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr style="color:white">
+                            <!-- select default bootstrap color -->
+                            <th class="bg-secondary">Country</th>
+                            <th class="bg-info">New confirmed</th>
+                            <th class="bg-warning">Total confirmed</th>
+                            <th class="bg-info">New Deaths</th>
+                            <th class="bg-danger">Total Deaths</th>
+                            <th class="bg-info">New Recovered</th>
+                            <th class="bg-success">Total Recovered</th>
+                            <th class="bg-info">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- iterate this record for all the items in countryList -->
+                  <tr *ngFor="let country of countryList | filter : filterParam" style="white-space:normal">
+                    <td class="bg-secondary">{{country.Country}}</td>
+                    <td >{{country.NewConfirmed}}</td>
+                    <td class="bg-warning">{{country.TotalConfirmed}}</td>
+                    <td >{{country.NewDeaths}}</td>
+                    <td class="bg-danger">{{country.TotalDeaths}}</td>
+                    <td >{{country.NewRecovered}}</td>
+                    <td class="bg-success">{{country.TotalRecovered}}</td>
+                    <!-- format data as date with pipe -->
+                    <td >{{country.Date | date}}</td>
+                  </tr>
 
+                </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
 </div>
