@@ -1,0 +1,105 @@
+<!-- 6 differnt grid => every of them express one summary -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6" style="text-align: center;">
+            <form class="form-inline active-cyan-4">
+                <input class="form-control form-control-sm mr-3 w-75 input-lg" type="search"
+                    placeholder="Search country" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" (click)="applyFilter()">Search</button>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+
+    <div class="row" style="min-height: 25px;">
+    </div>
+    <div class="container">
+        <div class="row" style="min-height: 125px;">
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
+                <div class="row" style="min-height: 100px;" >
+                    <div class="col-lg-12 bg-warning" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.NewConfirmed}}</div>
+                </div>
+                <div class="row" style="min-height: 25 px;">
+                    <div class="col-lg-12 text-warning" style="font-weight: 600; text-align: center;">New Confirmed cases</div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
+                <div class="row" style="min-height: 100px;" >
+                    <div class="col-lg-12 bg-success" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.NewRecovered}}</div>
+                </div>
+                <div class="row" style="min-height: 25 px;">
+                    <div class="col-lg-12 text-success" style="font-weight: 600; text-align: center;">New Recovery cases</div>
+                </div>
+            </div> 
+
+
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
+                <div class="row" style="min-height: 100px;" >
+                    <div class="col-lg-12 bg-danger" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.NewDeaths}}</div>
+                </div>
+                <div class="row" style="min-height: 25 px;">
+                    <div class="col-lg-12 text-danger" style="font-weight: 600; text-align: center;">New Death cases</div>
+                </div>
+            </div>
+
+            <div class="col-lg-1"></div>
+        </div>
+
+        <div class="row" style="min-height: 50px;"></div>
+
+        <div class="row" style="min-height: 125px;">
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
+                <div class="row" style="min-height: 100px;" >
+                    <div class="col-lg-12 bg-warning" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.TotalConfirmed}}</div>
+                </div>
+                <div class="row" style="min-height: 25 px;">
+                    <div class="col-lg-12 text-warning" style="font-weight: 600; text-align: center;">Total Confirmed cases</div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
+                <div class="row" style="min-height: 100px;" >
+                    <div class="col-lg-12 bg-success" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.TotalRecovered}}</div>
+                </div>
+                <div class="row" style="min-height: 25 px;">
+                    <div class="col-lg-12 text-success" style="font-weight: 600; text-align: center;">Total Recovery cases</div>
+                </div>
+            </div> 
+
+
+
+            <div class="col-lg-2"></div>
+
+            <div class="col-lg-2" style="box-shadow:10px 10px 5px gray">
+                <div class="row" style="min-height: 100px;" >
+                    <div class="col-lg-12 bg-danger" style="color: white; font-size: xx-large; text-align: center;">{{summaryObj.TotalDeaths}}</div>
+                </div>
+                <div class="row" style="min-height: 25 px;">
+                    <div class="col-lg-12 text-danger" style="font-weight: 600; text-align: center;">Total Death cases</div>
+                </div>
+            </div>
+
+            <div class="col-lg-1"></div>
+        </div>
+
+</div>
